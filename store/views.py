@@ -24,6 +24,7 @@ def product_list(request):
             'name': product.name,
             'description': product.description,
             'price': product.price,
+            'image': product.image.url if product.image else None,
             'categories': [{'id': category.id, 'name': category.name} for category in product.categories.all()]
         } for product in products
     ]
