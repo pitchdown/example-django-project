@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>root categories</title>
+</head>
+<body>
+<h1>categories without parent</h1>
+{% for category in categories %}
+<ul>
+    <li>
+        <a href="/category/{{ category.id }}/products">{{ category.name }}</a>
+    </li>
+</ul>
+{% endfor %}
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ category.name }}</title>
+</head>
+<body>
+<h1>products in {{ category.name }}</h1>
+{% for product in products %}
+<ul>
+  <li>
+      <a href="/product/{{ product.id }}/">{{ product.name }}</a>
+        - {{ product.total_price }}
+  </li>
+</ul>
+{% endfor %}
+<div>
+    <div>
+        <h2 style="display: inline">the most expensive product: </h2>
+        <h1 style="color: red; display: inline">{{ most_expensive_product.name }}</h1>
+    </div>
+    <br>
+    <div>
+        <h2 style="display: inline">cheapest product: </h2>
+        <h1 style="color: red; display: inline">{{ cheapest_product.name }}</h1>
+    </div>
+    <br>
+    <div>
+        <h2 style="display: inline">products average price: </h2>
+        <h1 style="color: red; display: inline">{{ avg_price }}</h1>
+    </div>
+    <br>
+    <div>
+        <h2 style="display: inline">total cost of products: </h2>
+        <h1 style="color: red; display: inline">{{ total_products_cost }}</h1>
+    </div>
+    <br>
+</div>
+</body>
+</html>

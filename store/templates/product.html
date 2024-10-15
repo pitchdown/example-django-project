@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }}</title>
+</head>
+<body>
+  <h1>product information:</h1>
+  <ul>
+    <li>name: {{ product.name }}</li>
+    <li>description: {{ product.description }}</li>
+    <li>price: {{ product.price }}</li>
+    <li>quantity: {{ product.quantity }}</li>
+    <li>product categories: {% for category in product.categories.all %}{{ category }} {% endfor %}</li>
+    <li>image: {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.name }}">{% else %} not found {% endif %}</li>
+  </ul>
+</body>
+</html>

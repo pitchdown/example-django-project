@@ -15,6 +15,7 @@ class Product(models.Model):
     name = models.CharField(max_length=64)
     description = models.TextField(blank=True, null=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)
+    quantity = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     categories = models.ManyToManyField(Category, related_name='products')
     image = models.ImageField(upload_to='products/', blank=True, null=True)
 
