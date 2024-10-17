@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     'store',
     'order',
+    'user'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
 ]
+
+AUTH_USER_MODEL = "user.User"
 
 ROOT_URLCONF = 'project.urls'
 
